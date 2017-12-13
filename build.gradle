@@ -1,13 +1,7 @@
 task groovy {}
 
 
-def myList = ["Gradle", "Groovy", "Android"]
 
-def printItemClosure = { it -> println "List : $it" }
-myList.each(printItemClosure)
-
-def printItemEachIndexClosure = { it, i -> println "List $i : $it" }
-myList.eachWithIndex(printItemEachIndexClosure)
 
 
 
