@@ -1,7 +1,9 @@
 task groovy {}
 
 
+def myList = ["Gradle", "Groovy", "Android"]
 
+myList.each { println "List : $it" }
 
 
 
