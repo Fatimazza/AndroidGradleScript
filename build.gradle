@@ -3,10 +3,16 @@ task groovy {}
 
 def doubleIt = { x -> x + x}
 
+def applyTwice (func, arg) {
+    func ( func(arg) )
+}
+
 def foo = 5
 def fooDoubleIt = doubleIt(foo)
+def fooDoubledTwice = applyTwice(doubleIt, foo)
 
 println "Applying doubleIt to $foo equals $fooDoubleIt"
+println "Applying doubleIt twice to $foo equals $fooDoubledTwice"
 
 
 
