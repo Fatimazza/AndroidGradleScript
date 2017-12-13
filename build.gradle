@@ -1,8 +1,12 @@
 task groovy {}
 
 
+def doubleIt = { x -> x + x}
 
+def foo = 5
+def fooDoubleIt = doubleIt(foo)
 
+println "Applying doubleIt to $foo equals $fooDoubleIt"
 
 
 
