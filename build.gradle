@@ -8,7 +8,9 @@ def myClosure = {
     println "The value of foo is $foo"
 }
 
-myClosure() //calling closure
+def variableA = myClosure
+def variableB = variableA
+variableB()
 
 
 
