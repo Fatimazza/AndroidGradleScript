@@ -8,9 +8,13 @@ class GroovyGreeter {
 
 def myGroovyGreeter = new GroovyGreeter()
 
-myGroovyGreeter.printGreeting()
-myGroovyGreeter.greeting = "My custom greeting"
-myGroovyGreeter.printGreeting()
+def greetingClosure = {
+    greeting = "Setting the greeting from a Closure"
+    printGreeting()
+}
+
+greetingClosure.delegate = myGroovyGreeter //delegate closure to Class instance
+greetingClosure() //invoke the closure
 
 
 
