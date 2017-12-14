@@ -1,20 +1,4 @@
-task groovy {}
 
-
-class GroovyGreeter {
-    String greeting = "Default greeting" //member variable
-    def printGreeting() { println "Greeting: $greeting" } //method
-}
-
-def myGroovyGreeter = new GroovyGreeter()
-
-def greetingClosure = {
-    greeting = "Setting the greeting from a Closure"
-    printGreeting()
-}
-
-greetingClosure.delegate = myGroovyGreeter //delegate closure to Class instance
-greetingClosure() //invoke the closure
 
 
 
