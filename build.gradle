@@ -10,6 +10,9 @@ task "myTask3"
 //Declaring Task using AST transformation
 task myTask4
 
+
+//Configuring a Task line by line
+
 //Configure some Properties of a Task (description, group)
 myTask4.description = "This is what’s shown in the task list"
 myTask4.group = "This is the heading for this task in the task list"
@@ -23,4 +26,14 @@ myTask4.doFirst { println "Do this first" }
 //Declare Task then pass a Closure to execute its Action
 //task myTask5 << { println "This how declare a task then give it action"} //deprecated
 task myTask6 doLast { println "This how declare a task then give it action"}
+
+
+//Configuring Task with Configuration Closure when Defining a Task
+task myTask7 {
+    description "Here’s a task with a configuration block"
+    group "Some group"
+    doLast {
+        println "Here's the action"
+    }
+}
 
