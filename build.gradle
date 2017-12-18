@@ -19,3 +19,8 @@ myTask4.doLast { println "Do this last" }
 myTask4.doFirst { println "Do this first" }
 //myTask4.leftShift { println "Do this even more last" } //deprecated in v 5.0
 //myTask4 << { println "Do this last of all" } //deprecated in v 5.0
+
+//Declare Task then pass a Closure to execute its Action
+//task myTask5 << { println "This how declare a task then give it action"} //deprecated
+task myTask6 doLast { println "This how declare a task then give it action"}
+
