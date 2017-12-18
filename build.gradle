@@ -10,4 +10,6 @@ task "myTask3"
 //Declaring Task using AST transformation
 task myTask4
 
-
+//Configure some Properties of a Task (description, group)
+myTask4.description = "This is what’s shown in the task list"
+myTask4.group = "This is the heading for this task in the task list"
