@@ -37,3 +37,8 @@ task myTask7 {
     }
 }
 
+//Other way implementing Configuration Closure when Defining a Task
+task myTask8 {
+    description("Description") //function call without ommitting parentheses
+    group = "Some Group" //assignment with equal sign or "=" also work
+}
