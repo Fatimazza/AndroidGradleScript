@@ -1,4 +1,13 @@
+//Declaring a Task
+project.task("myTask1")
 
+//Declaring Task without project, because all build scripts delegates to project object
+task("myTask2")
 
+//Declaring Task is calling function, so can be without parentheses
+task "myTask3"
+
+//Declaring Task using AST transformation
+task myTask4
 
 
