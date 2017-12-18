@@ -42,3 +42,9 @@ task myTask8 {
     description("Description") //function call without ommitting parentheses
     group = "Some Group" //assignment with equal sign or "=" also work
 }
+
+//Task Properties can be set in Task Declaration
+task myTask9 (description: "Another description") doLast {
+    println "Doing Something"
+}
+
