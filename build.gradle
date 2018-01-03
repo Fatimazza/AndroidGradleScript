@@ -23,3 +23,16 @@ task brushYourTeeth {
         println "Brushie. Brushie. Brushie."
     }
 }
+
+task takeShower {
+    doLast {
+        println "Taking a shower."
+    }
+}
+
+task putOnFragrance {
+    shouldRunAfter "takeShower"
+    doLast {
+        println "Smellin' fresh!"
+    }
+}
