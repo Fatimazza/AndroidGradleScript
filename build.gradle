@@ -36,3 +36,7 @@ task putOnFragrance {
         println "Smellin' fresh!"
     }
 }
+
+task getReady {
+    dependsOn = ["takeShower", "eatBreakfast", "putOnShoes"]
+}
