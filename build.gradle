@@ -40,3 +40,4 @@ task putOnFragrance {
 task getReady {
     dependsOn = ["takeShower", "eatBreakfast", "putOnShoes"]
 }
+putOnShoes.mustRunAfter "takeShower"
