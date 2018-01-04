@@ -47,3 +47,7 @@ task zipImageFolders(type: Zip){
 
     into 'build' //root Zip folder destination
 }
+
+task deleteBuildFolder(type: Delete){
+    delete 'build'
+}
