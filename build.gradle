@@ -2,3 +2,9 @@ task copyImages(type: Copy) {
     from 'images'
     into 'build'
 }
+
+task copyJpegs(type: Copy) {
+    from 'images'
+    include '*.jpg'
+    into 'build'
+}
