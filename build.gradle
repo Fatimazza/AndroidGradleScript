@@ -25,3 +25,9 @@ task copyImageFolders(type: Copy) {
 
     into 'build' //root Copy folder destination
 }
+
+task zipImages(type: Zip) {
+    baseName = 'images' //properties
+    destinationDir = file('build') //properties
+    from 'images'
+}
