@@ -8,3 +8,20 @@ task copyJpegs(type: Copy) {
     include '*.jpg'
     into 'build'
 }
+
+task copyImageFolders(type: Copy) {
+
+    //first child Copy specs
+    from ('images') {
+        include '*.jpg'
+        into 'jpeg' //subfolder
+    }
+
+    //second child Copy specs
+    from ('images') {
+        include '*.gif'
+        into 'gif' //subfolder
+    }
+
+    into 'build' //root Copy folder destination
+}
