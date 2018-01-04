@@ -10,7 +10,6 @@ task copyJpegs(type: Copy) {
 }
 
 task copyImageFolders(type: Copy) {
-
     //first child Copy specs
     from ('images') {
         include '*.jpg'
@@ -30,4 +29,21 @@ task zipImages(type: Zip) {
     baseName = 'images' //properties
     destinationDir = file('build') //properties
     from 'images'
+}
+
+task zipImageFolders(type: Zip){
+    baseName = 'specifiedImages'
+    destinationDir = file('build')
+
+    from ('images') {
+        include '*.jpg'
+        into 'jpeg' //subfolder
+    }
+
+    from ('images') {
+        include '*.gif'
+        into 'gif' //subfolder
+    }
+
+    into 'build' //root Zip folder destination
 }
