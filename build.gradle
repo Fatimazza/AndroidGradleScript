@@ -8,7 +8,7 @@ class HelloTask extends DefaultTask {
 task hello(type: HelloTask)
 
 
-class HelloNameTask extends DefaultTask{
+class HelloNameTask extends DefaultTask {
     String firstName //property
 
     @TaskAction
@@ -16,3 +16,9 @@ class HelloNameTask extends DefaultTask{
         println "Hello, $firstName"
     }
 }
+
+task helloName(type: HelloNameTask) {
+    firstName = 'Izza kece'
+}
+
+
