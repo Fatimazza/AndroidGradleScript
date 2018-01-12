@@ -6,3 +6,13 @@ class HelloTask extends DefaultTask {
 }
 
 task hello(type: HelloTask)
+
+
+class HelloNameTask extends DefaultTask{
+    String firstName //property
+
+    @TaskAction
+    void doAction() {
+        println "Hello, $firstName"
+    }
+}
