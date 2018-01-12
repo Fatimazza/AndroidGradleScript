@@ -1,0 +1,3 @@
+class HelloTask extends DefaultTask {
+
+}
