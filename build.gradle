@@ -1,3 +1,6 @@
 class HelloTask extends DefaultTask {
-
+    @TaskAction
+    void doAction() {
+        println 'Hello World'
+    }
 }
