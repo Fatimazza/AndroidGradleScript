@@ -4,3 +4,5 @@ class HelloTask extends DefaultTask {
         println 'Hello World'
     }
 }
+
+task hello(type: HelloTask)
