@@ -3,3 +3,9 @@ task printGreeting {
         println greeting
     }
 }
+
+ext {
+    // this will shadow all configuration
+    // from build.properties or command line
+    greeting = "Hello from inside the build script"
+}
